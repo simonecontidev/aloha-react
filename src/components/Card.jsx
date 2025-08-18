@@ -1,8 +1,8 @@
-function Card() {
+function Card(props) {
 
-    const title = "Tokyo";
-    const description = "This is a description of the card for Tokyo.";
-    const imgURL = "https://picsum.photos/200/300";
+    const title = props.title;
+    const description = "This is a description of the card.";
+    const imgURL = props.imgURL;
 
 
   return (
