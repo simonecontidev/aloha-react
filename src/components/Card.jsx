@@ -7,10 +7,10 @@ return (
         <h2 className="text-2xl text-white font-bold">{title}</h2>
         <p className="text-gray-500">{children}</p>
         {isVisited && <span className="text-green-500 mt-2">Visited</span>}
+        {!isVisited && <span className="text-red-500 mt-2">Not Visited</span>}
       </div>
     </div>
   );
   }
   
-
 export default Card;
