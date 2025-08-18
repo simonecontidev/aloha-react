@@ -2,12 +2,12 @@ import "./Navbar.css";
 import Link from './Link.jsx';
 
 function Navbar(){
-const x = 1;
+const x = 11;
 
 
     return (
 <>  
-<div className={`box rounded ${x < 10 ? "rotated" : ""}`}>x è {x}</div>
+<div className={`rounded-lg w-72 h-72 ${x < 10 ? "bg-red-500 rotate-45" : " bg-sky-500"}`}>x è {x}</div>
 
 
         <ul>
