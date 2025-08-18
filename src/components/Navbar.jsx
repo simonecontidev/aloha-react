@@ -7,7 +7,7 @@ const x = 1;
 
     return (
 <>  
-<div className={`box rounded ${x < 10 ? "rotated" : ""}rotated`}>x è {x}</div>
+<div className={`box rounded ${x < 10 ? "rotated" : ""}`}>x è {x}</div>
 
 
         <ul>
