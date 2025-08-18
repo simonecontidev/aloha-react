@@ -3,7 +3,19 @@ import './App.css';
 import Navbar from './components/Navbar.jsx';
 import Card from './components/Card.jsx';
 
+function handleClick() {
+  alert("Hello, World!");
+}
 
+
+function handleChange(event) {
+  console.log(event.target.value);
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  console.log("Form submitted");
+}
 
 function App() {
   const [count, setCount] = useState(0);
@@ -62,9 +74,12 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <button onClick={handleClick} >alert</button>
+        <input onChange={handleChange}/>
+
+        <form onSubmit={handleSubmit}>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </>
   )
