@@ -2,14 +2,20 @@ import "./Navbar.css";
 import Link from './Link.jsx';
 
 function Navbar(){
+const x = 1;
+
+
     return (
-        <nav>
+<>  
+<div className={`box rounded ${x < 10 ? "rotated" : ""}rotated`}>x è {x}</div>
+
+
         <ul>
-            <li><Link></Link><p>hola</p></li>
+            <li><Link></Link></li>
             <li><Link></Link></li>
             <li><Link></Link></li>
         </ul>
-        </nav>
-    );
+    </>
+    )
 }
 export default Navbar;

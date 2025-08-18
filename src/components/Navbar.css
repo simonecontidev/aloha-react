@@ -1,3 +1,18 @@
 ul{
     color: red;
 }
+
+.box{
+height: 300px;
+width: 300px;
+background-color: blue;
+}
+
+.rounded{
+    border-radius: 30px
+}   
+
+.rotated{
+    transform: rotate(45deg);
+    background-color: orange;
+}
