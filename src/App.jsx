@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css';
 import Navbar from './components/Navbar.jsx';
 import Card from './components/Card.jsx';
+import CardForm from './components/CardForm.jsx';
 
 function handleClick() {
   alert("Hello, World!");
@@ -19,8 +20,20 @@ function handleSubmit(e) {
 
 function App() {
   const [count, setCount] = useState(0);
+  const [items, setItems] = useState([1, 2, 3]);
+  const [user, setUser] = useState({ name: "Simone", age: 30 });
 
-  const cities = [
+  const updateUserName = () => {
+    const updateUser = { ...user, name: "Anna" };
+    setUser(updateUser);
+  };
+
+
+  const addCity = (city) => {
+    setCities([...cities, city]);
+  };
+
+  const [cities, setCities] = useState([
     { 
       id: 0,
       title: "Tokyo",
@@ -49,10 +62,13 @@ function App() {
       isVisited: true,
       description: "This is a description of the card of Paris"
     }
-  ];
+  ]);
+
+
 
   return (
     <>
+      <CardForm addCity={addCity}></CardForm>
         <div className="grid grid-cols-4 gap-10 p-4 m-1">
 
       {cities
@@ -74,6 +90,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        
         <button onClick={handleClick} >alert</button>
         <input onChange={handleChange}/>
 
