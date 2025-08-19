@@ -1,5 +1,5 @@
 function CardForm(addCity) {
-    const handleClick = () => {
+    const handleSubmit = () => {
         const city = {
       id: 4,
       title: "Barcelona",
@@ -12,12 +12,13 @@ function CardForm(addCity) {
     };
 
     return(
-        <div className="flex flex-col gap-3 w-80 mb-10">
+        <form onSubmit={handleSubmit} lassName="flex flex-col gap-3 w-80 mb-10">
+            
             <input type="text"></input>
             <input type="text"></input>
             <input type="text"></input>
-            <button className="bg-blue-500 text-white p-2 rounded-md" onClick={handleClick}>Add Card</button>
-        </div>
+            <button className="bg-blue-500 text-white p-2 rounded-md" type="submit">Add Card</button>
+        </form>
     )
 } 
 export default CardForm;

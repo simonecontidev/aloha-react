@@ -20,13 +20,7 @@ function handleSubmit(e) {
 
 function App() {
   const [count, setCount] = useState(0);
-  const [items, setItems] = useState([1, 2, 3]);
-  const [user, setUser] = useState({ name: "Simone", age: 30 });
-
-  const updateUserName = () => {
-    const updateUser = { ...user, name: "Anna" };
-    setUser(updateUser);
-  };
+  
 
 
   const addCity = (city) => {
